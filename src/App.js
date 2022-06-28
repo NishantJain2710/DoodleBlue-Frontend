@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+import {
+  Route,
+  Routes
+} from 'react-router-dom';
+
+import Login from './Screens/Authentication/Login';
+import Register from './Screens/Authentication/Register';
+
+import MapScreen from './Screens/UsersOnMap/MapScreen';
+import UploadUsers from './Screens/UploadUsers/UploadUsers';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Routes>
+            <Route path='/' element={<MapScreen/>} />
+            <Route path='/upload' element={<UploadUsers/>} />
+            {/* Authentication */}
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+        </Routes>
+    );
 }
 
 export default App;

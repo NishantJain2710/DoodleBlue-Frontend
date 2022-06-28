@@ -1,0 +1,47 @@
+.upload-container{
+    height: 100vh;
+    background-color: #002A5D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.uploadCsv{
+    min-width: 100px;
+    min-height: 100px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: #002A5D 1px solid;
+}
+
+.uploadCsv label{
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+}
+
+.uploadCsv div{
+    margin: 10px;
+}
+
+.uploadCsv button{
+    border: none;
+    background-color: #002A5D;
+    color: #f5f5f5;
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.uploadCsv button:disabled{
+    box-shadow: none;
+    background-color: #002a5db9;
+    cursor: no-drop;
+}
